@@ -16,6 +16,9 @@ LINE_COLOR = 'black'
 
 # Parameters
 iterations = 5
+save = True
+
+print(f'Iterations: {iterations}')
 
 phi = (1 + math.sqrt(5)) / 2
 
@@ -71,8 +74,6 @@ print(f'Lines:   {len(line_segs)}')
 
 lw = 10 / phi ** iterations
 
-save = input('Save plot (y/n)? ').lower() == 'y'
-
 if not save:
     exit()
 
@@ -93,5 +94,8 @@ plt.ylim([-1.0, 1.0])
 ax.set_aspect('equal')
 
 # Save graph
+filename = f'penrose-{iterations}.png'
+
 mplstyle.use('fast')
-plt.savefig(f'penrose-{iterations}.png', dpi=max(300, qual * phi ** iterations))
+plt.savefig(filename, dpi=max(300, qual * phi ** iterations))
+print(f'Saved to {filename}')
