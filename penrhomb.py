@@ -18,7 +18,7 @@ LINE_COLOR = 'black'
 iterations = 5
 save = True
 
-print(f'Iterations: {iterations}')
+print(f'Iterations:                     {iterations}')
 
 phi = (1 + math.sqrt(5)) / 2
 
@@ -68,9 +68,9 @@ for ty, a, b, c in tris:
     line_segs.append(((b.real, b.imag), (a.real, a.imag), (c.real, c.imag)))
 
 # Remove duplicate lines
-print(f'Tri 108: {len(tri_verts)}')
-print(f'Tri 36:  {len(tris) - len(tri_verts)}')
-print(f'Lines:   {len(line_segs)}')
+print(f'108 degree triangle count:      {len(tri_verts)}')
+print(f'36 degree triangle count:       {len(tris) - len(tri_verts)}')
+print(f'Line count:                     {len(line_segs)}')
 
 lw = 10 / phi ** iterations
 
