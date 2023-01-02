@@ -2,4 +2,6 @@
 
 This Python/Matplotlib script generates [penrose tiling](https://en.wikipedia.org/wiki/Penrose_tiling).
 
-![](penrose-5.png | width=100)
+The iteration count is configurable. The script automatically determines the output image resolution based on this value.
+
+![](penrose-5.png?raw=true)
